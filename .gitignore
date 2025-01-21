@@ -1,0 +1,65 @@
+# General files to ignore
+.DS_Store
+Thumbs.db
+*.log
+*.lock
+*.cache
+*.bak
+*.tmp
+*.swp
+*.suo
+*.user
+*.wdb
+*.db
+
+# Windows and IDE-specific files
+.vs/
+.vscode/
+*.csproj.user
+*.pidb
+*.sln.docstates
+
+# Node.js (Angular Frontend)
+node_modules/
+dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+.env
+.idea/
+.angular/cache/
+
+# Build artifacts (Angular and .NET Core)
+bin/
+obj/
+*.pdb
+*.dll
+*.exe
+*.app
+*.so
+*.dylib
+
+# Configuration and Publishing Artifacts
+publish/
+appsettings.*.json
+appsettings.json
+
+# Database-related
+*.mdf
+*.ldf
+*.sqlite
+
+# Logs
+logs/
+*.log
+log/
+
+# Temporary files
+*.tmp
+*.temp
+tmp/
+
+# Dependency directories
+packages/
+lib/
