@@ -49,6 +49,8 @@ appsettings.json
 *.mdf
 *.ldf
 *.sqlite
+*.dbmdl
+*.jfm
 
 # Logs
 logs/

@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediLife.BusinessProvider",
 		{85AD38B3-7E9C-4D88-89FF-241B69AF1B5F} = {85AD38B3-7E9C-4D88-89FF-241B69AF1B5F}
 	EndProjectSection
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "MediLife.DataBase", "MediLife.DataBase\MediLife.DataBase.sqlproj", "{F188291F-281A-4FC2-A108-E37DA99DF9A5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,12 @@ Global
 		{60FE5A4F-BF3B-43D3-8A67-8BBFDE4D087B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{60FE5A4F-BF3B-43D3-8A67-8BBFDE4D087B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{60FE5A4F-BF3B-43D3-8A67-8BBFDE4D087B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F188291F-281A-4FC2-A108-E37DA99DF9A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F188291F-281A-4FC2-A108-E37DA99DF9A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F188291F-281A-4FC2-A108-E37DA99DF9A5}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{F188291F-281A-4FC2-A108-E37DA99DF9A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F188291F-281A-4FC2-A108-E37DA99DF9A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F188291F-281A-4FC2-A108-E37DA99DF9A5}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
