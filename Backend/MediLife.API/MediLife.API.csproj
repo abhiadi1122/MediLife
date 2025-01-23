@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -8,6 +8,13 @@
 
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.9.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MediLife.BusinessProvider\MediLife.BusinessProvider.csproj" />
+    <ProjectReference Include="..\MediLife.Common\MediLife.Common.csproj" />
+    <ProjectReference Include="..\MediLife.DataObjects\MediLife.DataObjects.csproj" />
   </ItemGroup>
 
 </Project>

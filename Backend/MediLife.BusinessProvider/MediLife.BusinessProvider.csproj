@@ -6,4 +6,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MediLife.Common\MediLife.Common.csproj" />
+    <ProjectReference Include="..\MediLife.DataAccess\MediLife.DataAccess.csproj" />
+    <ProjectReference Include="..\MediLife.DataObjects\MediLife.DataObjects.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -6,4 +6,13 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="System.Data.SqlClient" Version="4.9.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MediLife.Common\MediLife.Common.csproj" />
+    <ProjectReference Include="..\MediLife.DataObjects\MediLife.DataObjects.csproj" />
+  </ItemGroup>
+
 </Project>
