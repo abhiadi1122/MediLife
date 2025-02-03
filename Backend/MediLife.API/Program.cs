@@ -1,4 +1,4 @@
-using System.Data;
+﻿using System.Data;
 using System.Data.SqlClient;
 using MediLife.BusinessProvider.IProviders;
 using MediLife.BusinessProvider.Providers;
@@ -7,10 +7,23 @@ using MediLife.DataAccess.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// ✅ Add CORS Policy
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAllOrigins",
+        policy =>
+        {
+            policy.WithOrigins("http://localhost:4300") // Allow Angular app
+                  .AllowAnyHeader()
+                  .AllowAnyMethod()
+                  .AllowCredentials(); // Allow cookies/authentication
+        });
+});
+
 // Add services to the container
 builder.Services.AddControllers();
 
-// Register the interfaces and their implementations
+// Register interfaces and implementations
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 
@@ -30,6 +43,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+// ✅ Apply CORS Before HTTPS Redirection
+app.UseCors("AllowAllOrigins");
 
 // Configure the HTTP request pipeline
 if (app.Environment.IsDevelopment())

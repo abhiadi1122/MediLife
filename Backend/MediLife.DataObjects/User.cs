@@ -26,7 +26,7 @@ namespace MediLife.DataObjects
         [StringLength(100, MinimumLength = 6)]
         public string PasswordHash { get; set; }
         public int RoleId { get; set; }
-        public string RoleName { get; set; } // Optional: For displaying the role name in responses
+        public string? RoleName { get; set; }
         public DateTime CreatedDate { get; set; }
     }
 }
