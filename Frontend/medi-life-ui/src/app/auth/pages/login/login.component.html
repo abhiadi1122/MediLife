@@ -1,1 +1,26 @@
-<p>login works!</p>
+<div class="login-container">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <h2>Login</h2>
+  
+      <div>
+        <label>Username</label>
+        <input type="text" formControlName="userName">
+        <div *ngIf="submitted && f.userName.errors">
+          <small *ngIf="f.userName.errors.required">Username is required.</small>
+        </div>
+      </div>
+  
+      <div>
+        <label>Password</label>
+        <input type="password" formControlName="password">
+        <div *ngIf="submitted && f.password.errors">
+          <small *ngIf="f.password.errors.required">Password is required.</small>
+          <small *ngIf="f.password.errors.minlength">Minimum 6 characters required.</small>
+        </div>
+      </div>
+  
+      <button type="submit">Login</button>
+      <p *ngIf="errorMessage">{{ errorMessage }}</p>
+    </form>
+  </div>
+  

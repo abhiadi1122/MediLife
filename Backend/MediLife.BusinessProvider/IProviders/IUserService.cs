@@ -11,5 +11,6 @@ namespace MediLife.BusinessProvider.IProviders
     {
         void RegisterUser(User user);
         User GetUserByEmail(string email);
+        string Authenticate(UserLoginRequest user);
     }
 }

@@ -29,4 +29,14 @@ namespace MediLife.DataObjects
         public string? RoleName { get; set; }
         public DateTime CreatedDate { get; set; }
     }
+
+    public class UserLoginRequest
+    {
+        [Required]
+        public string UserName { get; set; }
+        [Required]
+        [StringLength(100, MinimumLength = 6)]
+        public string password { get; set; }
+    }
+
 }

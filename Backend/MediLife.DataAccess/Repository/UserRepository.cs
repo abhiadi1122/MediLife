@@ -11,7 +11,7 @@ using MediLife.DataObjects;
 
 namespace MediLife.DataAccess.Repository
 {
-    public class UserRepository : BaseRepository,  IUserRepository
+    public class UserRepository : BaseRepository, IUserRepository
     {
         private readonly IDbConnection _dbConnection;
 
@@ -28,7 +28,7 @@ namespace MediLife.DataAccess.Repository
                 {
                     command.CommandType = CommandType.StoredProcedure;
                     command.Parameters.AddWithValue("@FullName", user.FullName);
-                    command.Parameters.AddWithValue("@UserName", user.UserName);                    
+                    command.Parameters.AddWithValue("@UserName", user.UserName);
                     command.Parameters.AddWithValue("@Email", user.Email);
                     command.Parameters.AddWithValue("@MobileNumber", user.MobileNumber);
                     command.Parameters.AddWithValue("@PasswordHash", user.PasswordHash);
@@ -38,6 +38,40 @@ namespace MediLife.DataAccess.Repository
                     command.ExecuteNonQuery();
                 }
             }
+        }
+
+        public User ValidateUser(string userName, string passwordHash)
+        {
+            User user = null;
+            var parameters = new { UserName = userName, PasswordHash = passwordHash };
+
+            using (SqlConnection connection = new SqlConnection(_dbConnection.ConnectionString))
+            {
+                using (SqlCommand command = new SqlCommand(StoreProc.SP_UserLogin, connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@UserName", userName);
+                    command.Parameters.AddWithValue("@PasswordHash", passwordHash);
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            user = new User
+                            {
+                                UserId = GetIntegerValue(reader["UserId"]),
+                                FullName = reader["FullName"].ToString(),
+                                UserName = reader["UserName"].ToString(),
+                                Email = reader["Email"].ToString(),
+                                MobileNumber = reader["MobileNumber"].ToString(),
+                                RoleId = GetIntegerValue(reader["RoleId"]),
+                                RoleName = reader["RoleName"].ToString()                                
+                            };
+                        }
+                    }
+                }
+            }
+            return user;
         }
 
         public User GetUserByEmail(string email)

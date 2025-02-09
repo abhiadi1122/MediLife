@@ -11,5 +11,6 @@ namespace MediLife.DataAccess.IRepository
     {
         void AddUser(User user);
         User GetUserByEmail(string email);
+        User ValidateUser(string userName, string passwordHash);
     }
 }

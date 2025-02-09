@@ -10,5 +10,6 @@ namespace MediLife.DataAccess.Configurations
     {
         public const string SP_SaveUserDetails = "AddUser";
         public const string SP_GetUserDetails = "GetUserByEmail";
+        public const string SP_UserLogin = "sp_UserLogin";
     }
 }

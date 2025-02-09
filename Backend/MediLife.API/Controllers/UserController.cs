@@ -39,5 +39,16 @@ namespace MediLife.API.Controllers
             }
             return Ok(user);
         }
+
+        [HttpPost("login")]
+        public IActionResult Login([FromBody] UserLoginRequest user)
+        {
+            var token = _userService.Authenticate(user);
+
+            if (token == null)
+                return Unauthorized(new { message = "Invalid username or password" });
+
+            return Ok(new { token });
+        }
     }
 }

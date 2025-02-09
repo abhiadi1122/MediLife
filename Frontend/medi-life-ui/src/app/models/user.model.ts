@@ -5,4 +5,9 @@ export interface User {
     mobileNumber: string;
     PasswordHash: string;    
   }
+
+  export interface UserLoginRequest {        
+    userName: string;    
+    password: string;    
+  }
   
