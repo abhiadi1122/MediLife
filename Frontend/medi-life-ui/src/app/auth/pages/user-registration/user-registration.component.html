@@ -16,7 +16,7 @@
       
       <!-- Full Name -->
       <div class="form-group">
-        <label>Full Name</label>
+        <label for="fullName">Full Name <span class="required">*</span></label>
         <input type="text" formControlName="fullName">
         <div *ngIf="submitted && f.fullName.errors" class="error-message">
           <small *ngIf="f.fullName.errors.required">Full Name is required.</small>
@@ -25,7 +25,7 @@
 
       <!-- Username -->
       <div class="form-group">
-        <label>Username</label>
+        <label for="userName">Username <span class="required">*</span></label>
         <input type="text" formControlName="userName">
         <div *ngIf="submitted && f.userName.errors" class="error-message">
           <small *ngIf="f.userName.errors.required">Username is required.</small>
@@ -34,7 +34,7 @@
 
       <!-- Email -->
       <div class="form-group">
-        <label>Email</label>
+        <label for="email">Email <span class="required">*</span></label>
         <input type="email" formControlName="email">
         <div *ngIf="submitted && f.email.errors" class="error-message">
           <small *ngIf="f.email.errors.required">Email is required.</small>
@@ -44,7 +44,7 @@
 
       <!-- Mobile Number -->
       <div class="form-group">
-        <label>Mobile Number</label>
+        <label for="mobileNumber">Mobile Number <span class="required">*</span></label>
         <input type="text" formControlName="mobileNumber">
         <div *ngIf="submitted && f.mobileNumber.errors" class="error-message">
           <small *ngIf="f.mobileNumber.errors.required">Mobile Number is required.</small>
@@ -54,7 +54,7 @@
 
       <!-- Password -->
       <div class="form-group">
-        <label>Password</label>
+        <label for="passwordHash">Password <span class="required">*</span></label>
         <input type="password" formControlName="passwordHash">
         <div *ngIf="submitted && f.passwordHash.errors" class="error-message">
           <small *ngIf="f.passwordHash.errors.required">Password is required.</small>

@@ -32,6 +32,13 @@
         color: #333;
         display: block;
         margin-bottom: 5px;
+
+        // Mandatory Asterisk Styling
+        .required {
+          color: #ff4d4d;
+          font-size: 16px;
+          font-weight: bold;
+        }
       }
   
       input, select {
