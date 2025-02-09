@@ -1,0 +1,88 @@
+// General Styles
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+  }
+  
+  // Form Styling
+  .login-form {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+  
+    h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+  
+    .form-group {
+      margin-bottom: 15px;
+      text-align: left;
+  
+      label {
+        font-size: 14px;
+        color: #333;
+        font-weight: 600;
+      }
+  
+      .form-control {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: border-color 0.3s ease-in-out;
+  
+        &:focus {
+          border-color: #4facfe;
+          outline: none;
+        }
+      }
+    }
+  
+    // Error Messages
+    .error-message {
+      color: #ff4d4d;
+      font-size: 12px;
+      margin-top: 5px;
+    }
+  
+    .error-text {
+      color: #ff4d4d;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+  
+    // Submit Button
+    .btn-submit {
+      width: 106%;
+      padding: 10px;
+      background: #4facfe;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+      margin-left: 0px;
+  
+      &:hover {
+        background: #00c3ff;
+      }
+    }
+  }
+  
+  // Responsive Design
+  @media (max-width: 400px) {
+    .login-form {
+      padding: 20px;
+    }
+  }
+  
