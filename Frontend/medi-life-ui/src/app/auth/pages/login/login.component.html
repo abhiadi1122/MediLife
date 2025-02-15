@@ -22,5 +22,8 @@
     <button type="submit" class="btn-submit">Login</button>
 
     <p *ngIf="errorMessage" class="error-text">{{ errorMessage }}</p>
+    <p class="register-text">
+     <b> Don't have an account? </b><a routerLink="/auth/register" class="register-link">Sign up here</a>
+    </p>
   </form>
 </div>

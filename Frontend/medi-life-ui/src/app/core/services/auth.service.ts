@@ -37,8 +37,7 @@ export class AuthService {
   }
 
   /** ✅ Check If User is Authenticated */
-  isAuthenticated(): boolean {
-    debugger;
+  isAuthenticated(): boolean {    
     return !!this.getToken();
   }
 

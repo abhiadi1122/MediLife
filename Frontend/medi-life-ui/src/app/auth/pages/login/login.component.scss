@@ -84,9 +84,26 @@
       }
     }
   }
+
+  /* Register link */
+.register-text {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.register-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.register-link:hover {
+  text-decoration: underline;
+}
   
   // Responsive Design
-  @media (max-width: 400px) {
+  @media (max-width: 400px) 
+  {
     .login-form {
       padding: 20px;
     }
