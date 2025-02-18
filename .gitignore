@@ -40,11 +40,6 @@ obj/
 *.so
 *.dylib
 
-# Configuration and Publishing Artifacts
-publish/
-appsettings.*.json
-appsettings.json
-
 # Database-related
 *.mdf
 *.ldf
